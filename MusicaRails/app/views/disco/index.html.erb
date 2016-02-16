@@ -33,11 +33,23 @@
 	</tr>
 	<tbody>
 
-<%clase="par"%>
+<!--#discos = Disco.all
+#contador = 0
+#for disco in discos
+	#if contador % 2 == 0 then
+	#	clase = "par"
+	#else
+	#	clase = "impar"
+	#end
+	#contador += 1
+-->
+
+
+
 <% 
 @discos = Disco.all
 for disco in @discos %>
-		<tr class= "par">
+		<tr class= "impar">
 			<td><%=disco.album%></td>
 			<td><%=disco.artista%></td>
 			<td><%=disco.anio%></td>
@@ -45,11 +57,12 @@ for disco in @discos %>
 			<td><a href="/disco/update_vista?id=<%=disco.id%>">Modificar</td>
 			<td><input type= "checkbox" name="id[]" value="<%=disco.id%>"  /></td>			
 		</tr>
+
 <% end %>
-	
 <%= submit_tag("Borrar Checking")%>
-</tbody>
 <% end %>
+</tbody>
+
 </table>
 
 <button><a href="/disco/search"> Busquedas </a></button>
