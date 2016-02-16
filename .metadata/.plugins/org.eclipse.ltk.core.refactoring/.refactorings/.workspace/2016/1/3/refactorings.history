@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CursoRuby/src/_06_condiciones_bucles/condiciones.rb&apos;" deleteContents="false" description="Delete resource &apos;CursoRuby/src/_06_condiciones_bucles/condiciones.rb&apos;" element1="/CursoRuby/src/_06_condiciones_bucles/condiciones.rb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1453277271396"/>
+</session>

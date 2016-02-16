@@ -1,0 +1,11 @@
+<h1>Clientes Detalle</h1>
+<%=@cliente.id%>
+<%=@cliente.nombre%>
+<%=@cliente.apellidos%>
+<%=@cliente.telefono%>
+<%=@cliente.edad%>
+
+
+<a href="/clientes/index">Volver</a>
+<a href="/clientes/borrar">Borrar</a>
+<a href="/clientes/editar">Editar</a>

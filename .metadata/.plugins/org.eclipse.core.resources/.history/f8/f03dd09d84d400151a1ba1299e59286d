@@ -1,0 +1,6 @@
+class Disco < ActiveRecord::Base
+  
+    validates_presence_of :album, :artista, :anio,  message: 'No puede haber ningún campo vacio!!'
+    validates_uniqueness_of :album, message: 'El albúm debe ser único'
+    validates_length_of :anio,:minimun => 1000, message: 'El año no puede ser menor que 1000'
+end

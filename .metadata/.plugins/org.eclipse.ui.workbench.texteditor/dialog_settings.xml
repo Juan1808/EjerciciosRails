@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="&lt;%= form_tag({controller:&quot;registro&quot;,action:&quot;create&quot;},method:&quot;get&quot;) do%&gt;&#x0D;&#x0A;&lt;%= label_tag(:titulo, &quot;Título:&quot;)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= text_field_tag(:titulo)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= label_tag(:comentarios, &quot;Comentarios:&quot;)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= text_field_tag(:comentarios)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= submit_tag(&quot;Crear Registro&quot;)%&gt;&#x0D;&#x0A;&lt;% end %&gt;&#x0D;&#x0A;&#x09;" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="&lt;%= form_tag({controller:&quot;registro&quot;,action:&quot;create&quot;},method:&quot;get&quot;) do%&gt;&#x0D;&#x0A;&lt;%= label_tag(:titulo, &quot;Título:&quot;)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= text_field_tag(:titulo)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= label_tag(:comentarios, &quot;Comentarios:&quot;)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= text_field_tag(:comentarios)%&gt;&lt;br /&gt;&#x0D;&#x0A;&lt;%= submit_tag(&quot;Crear Registro&quot;)%&gt;&#x0D;&#x0A;&lt;% end %&gt;&#x0D;&#x0A;&#x09;"/>
+		</list>
+	</section>
+</section>

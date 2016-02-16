@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;PruebaRails&apos;" deleteContents="false" description="Delete resource &apos;PruebaRails&apos;" element1="/PruebaRails" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1454315248255"/>&#x0A;<refactoring comment="Delete resource &apos;CursoRails/app/views/hola_mundo/saludameIngles.html.erb&apos;" deleteContents="false" description="Delete resource &apos;CursoRails/app/views/hola_mundo/saludameIngles.html.erb&apos;" element1="/CursoRails/app/views/hola_mundo/saludameIngles.html.erb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1454402213137"/>
+</session>

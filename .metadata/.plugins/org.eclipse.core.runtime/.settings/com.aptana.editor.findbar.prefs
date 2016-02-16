@@ -1,0 +1,2 @@
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\r\n\#Mon Feb 15 09\:28\:33 CET 2016\r\n0\=<%\\\= form_tag({controller\\\:"registro",action\\\:"create"},method\\\:"get") do%>\\r\\n<%\\\= label_tag(\\\:titulo, "T\\u00EDtulo\\\:")%><br />\\r\\n<%\\\= text_field_tag(\\\:titulo)%><br />\\r\\n<%\\\= label_tag(\\\:comentarios, "Comentarios\\\:")%><br />\\r\\n<%\\\= text_field_tag(\\\:comentarios)%><br />\\r\\n<%\\\= submit_tag("Crear Registro")%>\\r\\n<% end %>\\r\\n\\t\r\n
+eclipse.preferences.version=1

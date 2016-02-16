@@ -1,0 +1,12 @@
+<h3>Bienvenidos a la página de Mostrar</h3>
+
+<%
+	variable_accion = "mostrando"
+	variable_label = "Introduce el contenido"
+	variable_boton = "Te muestro el contenido"
+%>
+<br />
+<%= render partial: "template_formulario",
+		locals:{variableAccion: variable_accion,variableLabel: variable_label,variableBoton: variable_boton}
+%>
+<br />

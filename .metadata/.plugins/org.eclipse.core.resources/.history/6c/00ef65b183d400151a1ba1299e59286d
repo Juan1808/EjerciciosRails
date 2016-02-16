@@ -1,0 +1,6 @@
+class Disco < ActiveRecord::Base
+  
+    validates_presence_of :album, :artista, :anio,  message: 'No puede haber ningún campo vacio!!'
+  
+  
+end

@@ -1,0 +1,2 @@
+<h1>Cliente <%=cliente%> Borrado</h1>
+<a href="/clientes/index">Volver</a>

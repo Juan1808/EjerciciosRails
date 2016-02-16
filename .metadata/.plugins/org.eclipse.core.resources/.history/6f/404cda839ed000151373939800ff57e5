@@ -1,0 +1,15 @@
+<h1> Lista de registros </h1>
+<table>
+	<tr>
+		<th> Titulo </th>
+		<th> Comentarios </th>
+	</tr>
+	<tbody>
+<% for registro in @registros %>
+		<tr>
+			<td><%=registro.titulo%></td>
+			<td><%=registro.comentarios%></td>
+		</tr>
+<% end %>
+	</tbody>
+</table>

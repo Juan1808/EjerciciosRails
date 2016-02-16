@@ -1,0 +1,52 @@
+<h1>Bienvenidos a la Tienda de Discos</h1>
+<h3> Gestión de Discos</h3>
+
+<%= form_tag({controller:"disco",action:"create"},method:"get") do%>
+<%= label_tag(:album, "Albúm:")%><br />
+<%= text_field_tag(:album)%><br />
+<%= label_tag(:artista, "Artista:")%><br />
+<%= text_field_tag(:artista)%><br />
+<%= label_tag(:anio, "Año:")%><br />
+<%= number_field_tag(:anio)%><br />
+<%= submit_tag("Guardar Disco")%>
+
+<% end %>
+
+<% if @disco != nil && @disco.errors.any? %>
+	<ul>
+		<% @disco.errors.full_messages.each do |mensaje_error| %>
+			<li><%=mensaje_error%></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<table>
+
+<%= form_tag({controller:"disco",action:"delete_chequeados"},method:"get") do%>
+	<tr>
+		<th> Albúm </th>
+		<th> Artista </th>
+		<th> Año </th>
+		<th> Borrar </th>
+		<th> Borrar Chequeados </th>
+		<th> Modificar </th>
+	</tr>
+	<tbody>
+<a href="/disco/search"> Busquedas </a>
+<% 
+@discos = Disco.all
+for disco in @discos %>
+		<tr>
+			<td><%=disco.album%></td>
+			<td><%=disco.artista%></td>
+			<td><%=disco.anio%></td>
+			
+			<td><a href="/disco/delete?id=<%=disco.id%>">Borrar</td>
+			<input type= "checkbox" value="id[]" name="<%disco.id%>"  />
+			<td><a href="/disco/update_vista?id=<%=disco.id%>">Modificar</td>		
+		</tr>
+<% end %>
+	</tbody>
+<% end %>
+</table>
+

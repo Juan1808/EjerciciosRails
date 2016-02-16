@@ -1,0 +1,6 @@
+<form action= "<%=variable.accion%>" method="get">
+	
+	
+	
+	
+</form>

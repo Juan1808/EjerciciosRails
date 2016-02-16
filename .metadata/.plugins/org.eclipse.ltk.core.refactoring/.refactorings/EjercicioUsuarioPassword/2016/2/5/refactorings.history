@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EjercicioUsuarioPassword/app/views/usuario/alta.html.erb&apos; to &apos;indexAlta.html.erb&apos;" description="Rename resource &apos;alta.html.erb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/usuario/alta.html.erb" name="indexAlta.html.erb" stamp="1454574717976" updateReferences="true"/>
+</session>

@@ -1,0 +1,23 @@
+// Place all the styles related to the clientes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-image: url("1-foto.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    font-family: "Arial";
+}
+
+table,tr,th,td {
+    border: 1px solid black;
+   background: rgba(241,231,103,1);
+background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(251,193,77,1) 35%, rgba(254,182,69,1) 45%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(35%, rgba(251,193,77,1)), color-stop(45%, rgba(254,182,69,1)));
+background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(251,193,77,1) 35%, rgba(254,182,69,1) 45%);
+background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(251,193,77,1) 35%, rgba(254,182,69,1) 45%);
+background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(251,193,77,1) 35%, rgba(254,182,69,1) 45%);
+background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(251,193,77,1) 35%, rgba(254,182,69,1) 45%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+    
+}

@@ -1,0 +1,6 @@
+<h1>Formulario Index Templates</h1>
+
+<%= form_tag({controller:"Formulario", action:"rutas_templates"},method:"get") do%>
+<%= submit_tag("Ir a rutas")%>
+<%end%>
+

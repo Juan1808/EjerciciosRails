@@ -1,0 +1,7 @@
+class Registro < ActiveRecord::Base
+  
+  #Con esta línea validamos que no podamos meter en base
+  #de datos un título que esté vacio
+  validates_presence_of :titulo, message: 'El título no puede estar vacio, muñón!'
+  
+end

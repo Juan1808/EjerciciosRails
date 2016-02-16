@@ -1,0 +1,23 @@
+<h1>TablaMultiplicar</h1>
+
+<form action="/TablaMultiplicar/mostrar">
+	<input type="number" name="numero">
+	<input type="submit" value="Mostrar tabla"/>
+</form>
+
+<%
+	#Empezamos a hacer Ruby
+	numero = params[:numero]
+	if numero != nil
+		for i in (1..10)
+			valor = i * numero.to_i
+%>
+			<table> <tr><td>
+			<%=i%> * <%=numero%> = <%=valor%></td></tr></table>
+<%
+		end
+	end
+
+%>
+
+			

@@ -1,0 +1,8 @@
+<%= form_tag({controller:"registro",action:"create"},method:"get") do%>
+<%= label_tag(:titulo, "Título:")%><br />
+<%= text_field_tag(:titulo)%><br />
+<%= label_tag(:comentarios, "Comentarios:")%><br />
+<%= text_field_tag(:comentarios)%><br />
+<%= submit_tag("Crear Registro")%>
+<% end %>
+	

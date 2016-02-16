@@ -1,0 +1,30 @@
+class DiscoController < ApplicationController
+  def index
+    @discos = Disco.all
+    if @registros.size > 0
+      puts @registros[0].album
+    end
+  end
+
+  def create
+    album = params[:album]
+    artista = params[:artista]
+    anio = params[:anio]
+    discoHash = {}
+    discoHash[:album] = album
+    discoHash[:artista] = artista
+    discoHash[:anio] = anio
+    @disco = Disco.create(discoHash)
+    render :index
+    
+  end
+
+  def delete
+  end
+
+  def update
+  end
+
+  def search
+  end
+end

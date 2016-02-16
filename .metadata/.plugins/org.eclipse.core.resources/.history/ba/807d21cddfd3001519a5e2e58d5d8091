@@ -1,0 +1,16 @@
+class DiscoController < ApplicationController
+  def index
+  end
+
+  def create
+  end
+
+  def delete
+  end
+
+  def update
+  end
+
+  def search
+  end
+end

@@ -1,0 +1,50 @@
+<h1>Búsqueda de Discos</h1>
+
+<form action="/disco/search_by_artista">
+	Artista: <input type="text" name="artista" /><br />
+	<input type="submit" value="Buscar" />
+</form>
+
+<form action="/disco/search_by_anio">
+	Año: <input type="text" name="anio" /><br />
+	<input type="submit" value="Buscar" />
+</form>
+
+<% if @artistasEncontrados != nil %>
+	<table>
+		<tr>
+			<th> Artista </th>
+			<th> Albúm </th>
+			<th> Año </th>
+
+		</tr>
+		<% for disco in @artistasEncontrados %>
+		<tr>
+			<td><%=disco.artista%></td>
+			<td><%=disco.album%></td>
+			<td><%=disco.anio%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
+
+
+<% if @aniosEncontrados != nil %>
+	<table>
+		<tr>
+			<th> Artista </th>
+			<th> Albúm </th>
+			<th> Año </th>
+
+		</tr>
+		<% for disco in @aniosEncontrados %>
+		<tr>
+			<td><%=disco.artista%></td>
+			<td><%=disco.album%></td>
+			<td><%=disco.anio%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
+
+

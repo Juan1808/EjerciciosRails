@@ -1,0 +1,28 @@
+class RegistroController < ApplicationController
+  
+  def new
+    #Registros.all nos devuelve todos los registros de la base de datos y los almacena en una
+    #variable. Al  heredar de ActiveRecord, estarán automáticamente implementados sus attr_accessor
+    #Los registros van todos almacenados en un Array
+    @registros = Registro.all
+    if @registros.size > 0
+      puts @registros[0].titulo
+      #Te devuelve el primer registro de esa tabla, el .last el último, además del campo que tú le indiques
+      #en este caso el id, arriba el titulo
+      puts @registros.first.id 
+    end
+  end
+  
+  def create
+    titulo = params[:titulo]
+    comentarios = params[:comentarios]
+    parametrosHash ={}
+    parametrosHash[:titulo] = titulo
+    parametrosHash[:comentarios] = comentarios
+    #La clave corresponde con el nombre de la columna de la base de datos
+    
+    Registro.create(parametrosHash)
+  end
+  
+  
+end

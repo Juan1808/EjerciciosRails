@@ -1,0 +1,12 @@
+<h1>Formulario Index Templates</h1>
+
+<%
+	variable_enlace = "http://www.google.es"
+	variable_mostrar = "Google"
+%>
+<br />
+<%= render partial: "templates_dinamico",
+		locals:{direccionWeb: variable_enlace,direccionMostrar: variable_mostrar}
+%>
+<br />
+

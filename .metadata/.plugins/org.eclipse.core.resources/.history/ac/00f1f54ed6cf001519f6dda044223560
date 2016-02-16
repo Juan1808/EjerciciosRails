@@ -1,0 +1,6 @@
+class PruebaController < ApplicationController
+  def index
+    @enlace = "http://www.google.es"
+    @literal = "Google"
+  end
+end

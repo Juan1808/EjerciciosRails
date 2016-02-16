@@ -1,0 +1,6 @@
+<h3> Buscamos por comentario </h3>
+<form action="/registro/buscar_por_comentario">
+	<input type="text" />
+	
+	
+</form>

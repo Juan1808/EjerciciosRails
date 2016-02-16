@@ -1,0 +1,4 @@
+<h1>Formulario Index Templates</h1>
+
+<%=render "template_enlace"%>
+

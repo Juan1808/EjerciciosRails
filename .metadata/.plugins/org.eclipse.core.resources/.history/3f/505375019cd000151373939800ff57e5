@@ -1,0 +1,10 @@
+class RegistroController < ApplicationController
+  
+  def new
+    #Registros.all nos devuelve todos los registros de la base de datos y los almacena en una
+    #variable. Al  heredar de ActiveRecord, estarán automáticamente implementados sus attr_accessor
+    @registros = Registro.all
+  end
+  
+  
+end

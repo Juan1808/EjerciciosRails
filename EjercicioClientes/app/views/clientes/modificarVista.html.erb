@@ -1,0 +1,11 @@
+<h1>Modificar Cliente</h1>
+
+<form action="/clientes/modificar">
+		Nombre<input type="text" name="nombre" value="<%=@cliente1.nombre%>"/><br />
+		Apellidos<input type="text" name="apellidos" value="<%=@cliente1.apellidos%>"/><br />
+		Edad<input type="number" name="edad" value="<%=@cliente1.edad%>"/><br />
+		Teléfono<input type="tel" name="telefono" value="<%=@cliente1.telefono%>"/><br />
+		<input type="hidden" name="id" value="<%=@cliente1.id%>" />
+		<input type="submit" name="modificar" value="Modificar" /><br />
+		
+</form>

@@ -1,0 +1,15 @@
+class Registro < ActiveRecord::Base
+  
+  #Con esta línea validamos que no podamos meter en base
+  #de datos un título que esté vacio
+  validates_presence_of :titulo, message: 'El título no puede estar vacio, muñón!'
+  
+  #Podemos validar porque no se repita un campo
+  validates_uniqueness_of :titulo, message: 'El título debe ser único'
+  
+  #Podemos hacer validaciones de tamaño
+  validates_length_of :comentarios, :within => 5..200, message: 'El comentario debe tener entre 5 y 200 caracteres'
+  #podemos utilizar otras opciones en vez de ':within'
+  #':minimun' Establece tamaño mínimo
+  #':maximun' Establece tamaño máximo
+end
