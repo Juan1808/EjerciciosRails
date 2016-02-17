@@ -1,7 +1,0 @@
-<h3 style="color: red">Este sería nuestro contenido principal</h3>
-<%=render "template_enlace"%>
-
-<%
-	variable_enlace = "http://www.google.es"
-	variable_mostrar = "Google"
-%>

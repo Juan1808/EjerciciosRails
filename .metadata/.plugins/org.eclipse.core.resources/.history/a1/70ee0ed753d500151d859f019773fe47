@@ -1,0 +1,34 @@
+class LibroController < ApplicationController
+  def index
+    @libros = Libro.all
+    if @libros.size > 0
+      puts @libros[0].titulo
+    end
+  end
+
+  def create
+    titulo = params[:titulo]
+    autor = params[:autor]
+    genero = params[:genero]
+    libroHash = {}
+    libroHash[:titulo] = titulo
+    libroHash[:autor] = autor
+    libroHash[:genero] = genero
+    @libro = Libro.create(libroHash)
+    @libros = Libro.all
+    render :index
+  end
+
+  def delete
+    id = params[:id].to_i
+    Libro.delete id
+    render :index
+  end
+
+  def update
+    
+  end
+
+  def search
+  end
+end

@@ -1,9 +1,0 @@
-El nombre introducido ha sido <%=params[:nombre]%><br />
-Los números que ha elegido son <%=params[:check_box_numeros]%><br />
-Le gusta la página a nuestro usuario? <%=params[:gusta]%><br />
-La contraseña escogida es <%=params[:secreto]%><br />
-Su fecha de nacimiento es <%=params[:fecha]%><br />
-Su e-mail es <%=params[:email]%><br />
-El color elegido es <%=params[:color]%><br />
-El número escogido es <%=params[:edad]%><br />
-los comentarios añadidos son <%=params[:comentarios]%><br />

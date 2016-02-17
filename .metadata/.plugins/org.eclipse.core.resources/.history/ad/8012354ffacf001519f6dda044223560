@@ -1,2 +1,0 @@
-<h3>Bienvenidos a la página de Mostrar</h3>
-<%= form_tag({controller:"Formulario",action:params[:contenido]},method:"get") do%>

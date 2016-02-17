@@ -1,2 +1,0 @@
-<h1> Los datos del usuario con id: <%=@libro.id%></h1>
-<h3> Título: <%=@libro.titulo%></h3>

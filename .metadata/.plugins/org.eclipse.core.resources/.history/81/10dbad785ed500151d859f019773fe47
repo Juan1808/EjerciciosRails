@@ -1,0 +1,15 @@
+<h1>Modificar Libro</h1>
+
+<h3> Introduzca los nuevos datos </h3>
+
+<%= form_tag({controller:"libro",action:"update"},method:"get") do%>
+<%= label_tag(:titulo, "Título:")%><br />
+<%= text_field_tag(:titulo)%><br />
+<%= label_tag(:autor, "Autor:")%><br />
+<%= text_field_tag(:autor)%><br />
+<%= label_tag(:genero, "Género:")%><br />
+<%= text_field_tag(:genero)%><br />
+<%= hidden_field_tag(:id, @libro.id)%>
+<%= submit_tag("Modificar Libro")%>
+<% end %>
+

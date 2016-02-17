@@ -1,0 +1,65 @@
+class LibroController < ApplicationController
+  def index
+    @libros = Libro.all
+    if @libros.size > 0
+      puts @libros[0].titulo
+    end
+  end
+
+  def create
+    titulo = params[:titulo]
+    autor = params[:autor]
+    genero = params[:genero]
+    libroHash = {}
+    libroHash[:titulo] = titulo
+    libroHash[:autor] = autor
+    libroHash[:genero] = genero
+    @libro = Libro.create(libroHash)
+    @libros = Libro.all
+    render :index
+  end
+
+  def delete
+    id = params[:id].to_i
+    Libro.delete id
+    render :index
+  end
+
+  def update_vista
+    @libro = nil
+    id = params[:id].to_i
+    @libro = Libro.find id
+  end
+
+  def update
+    id = params[:id].to_i
+    titulo = params[:titulo]
+    autor = params[:autor]
+    genero = params[:genero]
+    libroHash = {}
+    libroHash[:titulo] = titulo
+    libroHash[:autor] = autor
+    libroHash[:genero] = genero
+    @libro = Libro.find id
+    update = @libro.update_attributes(libroHash)
+    render :index
+  end
+
+  def search_by_titulo
+    titulo = params[:titulo]
+    @titulosEncontrados = Libro.where(:titulo => titulo)
+    render :search
+  end
+  
+  def search_by_autor
+    autor = params[:autor]
+    @autoresEncontrados = Libro.wher(:autor => autor)
+    render :search
+  end
+  
+  def search_by_genero
+    genero = params[:genero]
+    @generosEncontrados = Libro.where(:genero => genero)
+    
+  end
+end

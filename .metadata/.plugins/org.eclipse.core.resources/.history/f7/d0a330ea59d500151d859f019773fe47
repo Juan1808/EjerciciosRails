@@ -1,0 +1,76 @@
+<h3> Búsquedas </h3>
+
+<h4> Búsqueda por título </h4>
+<form action="/libro/search_by_titulo">
+Introduce título a buscar: <input type="text" name="titulo" /><br />
+<input type="submit" value="Buscar" />
+
+<% if @titulosEncontrados != nil %>
+	<table>
+		<tr>
+			<th> Título </th>
+			<th> Autor </th>
+			<th> Género </th>
+
+		</tr>
+		<% for libro in @titulosEncontrados %>
+		<tr>
+			<td><%=libro.titulo%></td>
+			<td><%=libro.autor%></td>
+			<td><%=libro.genero%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
+
+<h4> Búsqueda por autor </h4>
+<form action="/libro/search_by_autor">
+Introduce autor a buscar: <input type="text" name="autor" /><br />
+<input type="submit" value="Buscar" />
+
+<% if @autoresEncontrados != nil %>
+	<table>
+		<tr>
+			<th> Autor </th>
+			<th> Título </th>
+			<th> Género </th>
+
+		</tr>
+		<% for libro in @autoresEncontrados %>
+		<tr>
+			<td><%=libro.autor%></td>
+			<td><%=libro.titulo%></td>
+			<td><%=libro.genero%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
+
+
+<h4> Búsqueda por género </h4>
+<form action="/libro/search_by_genero">
+Introduce género a buscar: <input type="text" name="genero" /><br />
+<input type="submit" value="Buscar" />
+
+<% if @generosEncontrados != nil %>
+	<table>
+		<tr>
+			<th> Género </th>
+			<th> Título </th>
+			<th> Autor </th>
+			
+		</tr>
+		<% for libro in @generosEncontrados %>
+		<tr>
+			<td><%=libro.genero%></td>
+			<td><%=libro.titulo%></td>
+			<td><%=libro.autor%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
+
+
+
+
+

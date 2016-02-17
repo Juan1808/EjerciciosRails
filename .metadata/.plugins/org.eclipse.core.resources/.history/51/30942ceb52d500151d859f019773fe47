@@ -1,0 +1,41 @@
+<h1> Librería Rails </h1>
+<h3> Gestión de Libros</h3>
+
+<%= form_tag({controller:"libro",action:"create"},method:"get") do%>
+<%= label_tag(:titulo, "Título:")%><br />
+<%= text_field_tag(:titulo)%><br />
+<%= label_tag(:autor, "Autor:")%><br />
+<%= text_field_tag(:autor)%><br />
+<%= label_tag(:genero, "Género:")%><br />
+<%= text_field_tag(:genero)%><br />
+<%= submit_tag("Guardar Libro")%>
+
+<% end %>
+
+<table>
+
+
+	<tr>
+		<th> Albúm </th>
+		<th> Artista </th>
+		<th> Año </th>
+		<th> Borrar </th>
+		<th> Modificar </th>
+	</tr>
+	<tbody>
+
+<% 
+@libros = Libro.all
+for libro in @libros %>
+		<tr>
+			<td><%=libro.titulo%></td>
+			<td><%=libro.autor%></td>
+			<td><%=libro.genero%></td>
+			
+<% end %>
+
+
+</tbody>
+
+</table>
+

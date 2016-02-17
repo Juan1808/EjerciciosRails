@@ -1,5 +1,0 @@
-<form action= "<%=variableAccion%>" method="get">
-	<label name= "<%=variableLabel%>">
-		
-		<input type="submit" name="<%=variableBoton%>">
-</form>

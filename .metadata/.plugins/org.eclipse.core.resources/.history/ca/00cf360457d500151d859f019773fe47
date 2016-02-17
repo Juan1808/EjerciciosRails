@@ -1,0 +1,57 @@
+<h1> Librería Rails </h1>
+<h3> Gestión de Libros</h3>
+
+<%= form_tag({controller:"libro",action:"create"},method:"get") do%>
+<%= label_tag(:titulo, "Título:")%><br />
+<%= text_field_tag(:titulo)%><br />
+<%= label_tag(:autor, "Autor:")%><br />
+<%= text_field_tag(:autor)%><br />
+<%= label_tag(:genero, "Género:")%><br />
+<%= text_field_tag(:genero)%><br />
+<%= submit_tag("Guardar Libro")%>
+
+<% end %>
+
+
+
+<h3> Listado de libros </h3>
+<table>
+
+
+	<tr>
+		<th> Titulo </th>
+		<th> Autor </th>
+		<th> Género </th>
+		<th> Borrar </th>
+		<th> Modificar </th>
+	</tr>
+	<tbody>
+		
+<% 
+@libros = Libro.all
+for libro in @libros %>
+
+		<tr>
+			<td><%=libro.titulo%></td>
+			<td><%=libro.autor%></td>
+			<td><%=libro.genero%></td>
+			<td><a href="/libro/delete?id=<%=libro.id%>">Borrar</td>
+			<td><a href="/libro/update_vista?id=<%=libro.id%>">Modificar</td>
+			
+<% end %>
+
+
+</tbody>
+</table>
+
+<h3> Búsquedas </h3>
+
+<form action="/libro/search_by_titulo">
+<input type="text" name="titulo" />
+<select>
+  <option value="titulo">Titulo</option>
+  <option value="autor">Autor</option>
+  <option value="genero">Género</option>
+</select>
+<input type="submit" value="Buscar" />
+
